@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #d5e0ff;
+  font-family: "Roboto", sans-serif;
+}
+
+#loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 9999;
+}
+
+#svg {
+  height: 150px;
+  width: 150px;
+  stroke-width: 8px;
+  stroke-dasharray: 4500;
+  animation: draw 3s ease;
+}
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  25% {
+    stroke-dashoffset: 3375;
+  }
+  50% {
+    stroke-dashoffset: 2250;
+  }
+  75% {
+    stroke-dashoffset: 1125;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
